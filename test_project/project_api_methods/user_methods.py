@@ -27,7 +27,7 @@ class UserMethods:
                   "reblog_key": reblog_key}
         response = ApiUtils().post(url, auth=self.auth, data=params)
 
-        return response.json()
+        return {"body": response.json(), "status_code": response.status_code}
 
     def get_user_blogs(self):
 

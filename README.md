@@ -12,3 +12,4 @@ pip install -r requirements.txt
 
 python -m pytest <test_name>
 
+pytest --html=report.html --base_url=123 -k test

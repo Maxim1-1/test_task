@@ -22,8 +22,8 @@ class PostMethods:
 
     def get_post_info_by_id(self, post_id):
         url = self.__get_url_for_request(Endpoints.GET_INFO_POST_BY_ID, post_id)
-        params = {"post_format": "legacy"}
-        response = ApiUtils().get(url, auth=self.auth,params=params)
+
+        response = ApiUtils().get(url, auth=self.auth)
 
         return {"body": response.json(), "status_code": response.status_code}
 
@@ -35,15 +35,14 @@ class PostMethods:
     def create_post(self, type_message, message, picture_path=None, title=None):
         url = self.__get_url_for_request(Endpoints.CREATE_POST)
 
-        open_img = open(picture_path, 'rb')
-        byte_img = base64.b64encode(open_img.read())
-
         if type_message == 'text':
             data = {"type": "text",
                     "title": title,
                     "body": message
                     }
         elif type_message == 'photo':
+            open_img = open(picture_path, 'rb')
+            byte_img = base64.b64encode(open_img.read())
             data = {"type": "photo",
                     "caption": message,
                     "data64": byte_img}
@@ -53,10 +52,10 @@ class PostMethods:
 
         return {"body": response.json(), "status_code": status_code}
 
-    def delete_post(self,post_id):
+    def delete_post(self, post_id):
         url = self.__get_url_for_request(Endpoints.VALIDATE_IK_ON_POST)
-        params = {"id":post_id}
-        response = ApiUtils().post(url, auth=self.auth,data=params)
+        params = {"id": post_id}
+        response = ApiUtils().post(url, auth=self.auth, data=params)
         status_code = response.status_code
         return {"body": response.json(), "status_code": status_code}
 
@@ -67,8 +66,8 @@ class PostMethods:
                   "comment": comment
                   }
         response = ApiUtils().post(url, auth=self.auth, data=params)
-        return response
-        # return {"body": response.json(), "status_code": response.reason}
+
+        return {"body": response.json(), "status_code": response.status_code}
 
     def edit_text_post(self, post_id, comment):
         url = self.__get_url_for_request(Endpoints.EDIT_TEXT)
