@@ -36,8 +36,3 @@ class UserMethods:
         return {"body": response.json(), "status_code": response.status_code}
 
 
-
-# s = UserMethods('https://api.tumblr.com','test-task').get_user_blogs()
-# print(s)
-# s = UserMethods('https://api.tumblr.com','test-task').set_like_on_post(699547815757676544,'KxbBrfF9')
-# print(s)

@@ -25,7 +25,7 @@ class PostMethods:
 
         response = ApiUtils().get(url, auth=self.auth)
 
-        return {"body": response.json(), "status_code": response.status_code}
+        return {"body": response.json(), "status_code": response.status_code,'msg':response.json()["meta"]["msg"]}
 
     def get_like_on_post(self):
         url = self.__get_url_for_request(Endpoints.VALIDATE_IK_ON_POST)
@@ -78,13 +78,4 @@ class PostMethods:
         response = ApiUtils().post(url, auth=self.auth, data=data)
         return {"body": response.json(), "status_code": response.status_code}
 
-# t = PostMethods('https://api.tumblr.com', 'test-task').create_post(type_message='photo', message='fgfg')
-# print(t)
 
-# 699544302367457280
-# s = PostMethods('https://api.tumblr.com', 'test-task').create_post('LIKEKKKKKK', 'LIKEEEEEEE')
-# print(s)
-# s = PostMethods('https://api.tumblr.com', 'test-task').get_post_info_by_id(699551340458819584)
-# print(s)
-# s = PostMethods('https://api.tumblr.com', 'test-task').edit_text_post(699547815757676544,'342231')
-# print(s)
