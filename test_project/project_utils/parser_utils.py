@@ -7,8 +7,8 @@ class UtilsParse:
         with open(r'..\config\config.json', "r") as file:
             data = json.load(file)
             return data
-
     @staticmethod
-    def write_config(data):
-        with open(r'..\config\config.json', "w") as file:
-            json.dump(data, file)
+    def parse_test_data():
+        with open(r'..\test_data\test_data.json', "r") as file:
+            data = json.load(file)
+            return data

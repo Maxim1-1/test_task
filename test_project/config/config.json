@@ -1,3 +1,10 @@
 {
-  "token": "635bacd8b7698e47614088a2"
+  "client_key": "St9EA4ZzRHz7Vff6QGExSeXwVGXTx99DMqbp0z3emXbULvGd6K",
+  "client_secret": "uC9yun1bJhPqXkelTkug597ClxM7ohWFapRSG9H0w7njcokdDZ",
+  "resource_owner_key": "M2LFvKLng3gnmuohyFs4e9GBBkM2K3LTr4ROdGOOqpC3k9XSDV",
+  "resource_owner_secret": "Vny2GmzJdOG922cJevwoFosTh5QGV5aXTkeONYEHyIM2XYRWSx",
+  "ver_api": "v2",
+  "resource_user": "user",
+  "resource_post": "blog",
+  "blog_id": "test-task"
 }

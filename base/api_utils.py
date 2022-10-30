@@ -4,13 +4,13 @@ import requests
 class ApiUtils:
 
     @staticmethod
-    def get(url, headers=None):
-        request = requests.get(url, headers=headers)
+    def get(url, stream=None, headers=None, auth=None, params=None):
+        request = requests.get(url, headers=headers, auth=auth, params=params, stream=stream)
         return request
 
     @staticmethod
-    def post(url=None, headers=None, data=None, json=None):
-        request = requests.post(url=url, headers=headers, json=json, data=data)
+    def post(url, headers=None, data=None, json=None, auth=None):
+        request = requests.post(url=url, headers=headers, json=json, data=data, auth=auth)
         return request
 
     @staticmethod
@@ -20,5 +20,3 @@ class ApiUtils:
     @staticmethod
     def put(url=None):
         request = requests.put(url)
-
-
