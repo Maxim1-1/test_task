@@ -1,8 +1,8 @@
 {
-  "client_key": "ovK1I0CpjwAZUkhQuIYmLmKHR4S1noq9eMdcQEY1X5ipgLqkZ8",
-  "client_secret": "mLvtPPXswTL8zDk5BAhd8s71WgWAR2KvZHHvS52noItCPwjEO3",
-  "resource_owner_key": "rXvjnFoNFzUnSUWAtypmA75jwFBF0QyXLtJlQeAMwYgbaLmT2m",
-  "resource_owner_secret": "RE6nP1uexcx9jZNfNFfw6OLgjziySe55bdT1LZHmE905KWx0hX",
+  "client_key": "",
+  "client_secret": "",
+  "resource_owner_key": "",
+  "resource_owner_secret": "",
   "ver_api": "v2",
   "resource_user": "user",
   "resource_post": "blog",
