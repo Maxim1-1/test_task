@@ -45,7 +45,7 @@ class TestsTumblr:
         reblog_key = Steps(base_url).get_text_post(TEST_DATA["test_post_id"],"reblog_key")
         assert post.post_reblog(reblog_key=reblog_key, post_id=TEST_DATA["test_post_id"],comment=RANDOM_TEXT)["status_code"] == 201, "Статус код не соответствует ожидаемому"
 
-    @pytest.mark.test4
+    # @pytest.mark.test4
     def test_4_user_case(self, add_url):
         base_url = add_url["url"]
         post_methods = PostMethods(base_url, CONFIG["blog_id"])
@@ -56,9 +56,9 @@ class TestsTumblr:
         assert post_methods.edit_text_post(post_id=new_post_id, comment=EDIT_TEXT)["status_code"] == 200, "Статус код не соответствует ожидаемому"
         assert Steps(base_url).get_edit_text(new_post_id) == EDIT_TEXT, "Новый текст поста не совпадает с отправленным"
 
-    @pytest.mark.test5
+    # @pytest.mark.test5
     def test_5_cheking_following_user(self, add_url):
-        base_url = add_url["url"]
+        base_url = "https://api.tumblr.com"
         user_methods = UserMethods(base_url, CONFIG["blog_id"])
         assert user_methods.get_user_blogs()["status_code"] == 200, "Статус код не совпадает с ожидаемым"
         assert Steps(base_url).get_user_blogs() == TEST_DATA["following_blog"], "Тестовый блог отсутствует в списке"

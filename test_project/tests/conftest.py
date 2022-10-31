@@ -3,7 +3,7 @@ import pytest
 
 def pytest_addoption(parser):
     parser.addoption(
-        "--base_url", action="store", default="new_url", help="my option: type1 or type2"
+        "--base_url", action="store", default="https://api.tumblr.com", help="url not corrected"
     )
 
 

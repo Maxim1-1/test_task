@@ -8,12 +8,17 @@ class UrlsUtils:
 
         if obj_request == 'user':
             url_user = f"{base_url}/{CONFIG['ver_api']}/{CONFIG['resource_user']}{endpoint}"
+
             return url_user
         elif obj_request == 'post':
 
             url_post = f"{base_url}/{CONFIG['ver_api']}/{CONFIG['resource_post']}/{blog_id}{endpoint}"
 
             if post_id is None:
+
                 return url_post
             else:
-                return f"{url_post}/{post_id}"
+                url_post_id = f"{url_post}/{post_id}"
+
+                return url_post_id
+
