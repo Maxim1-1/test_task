@@ -9,7 +9,8 @@
 
 `pip install -r requirements.txt`
 
-### Запуск тестов Необходимо перейти в директорию /test_project/tests/ и выполнить команду
+### Запуск тестов<br>
+Необходимо перейти в директорию /test_project/tests/ и выполнить команду
 
 url для запуска =  https://api.tumblr.com <br>
 
